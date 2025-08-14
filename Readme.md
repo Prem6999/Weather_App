@@ -24,6 +24,10 @@ python -m venv env
 python3 -m venv env
 ```
 
+``` bash
+cd env
+```
+
 ---
 
 ## 3️⃣ Activate the Virtual Environment
