@@ -1,15 +1,17 @@
 [MASTER]
 ignore=venv,env
-extension-pkg-whitelist=PyQt5
+extension-pkg-allow-list=PyQt5   # new name (old: extension-pkg-whitelist)
 
 [TYPECHECK]
-ignored-modules=PyQt5,PyQt5.QtWidgets,PyQt5.QtCore
+ignored-modules=PyQt5,PyQt5.QtWidgets,PyQt5.QtCore,PyQt5.QtGui
+generated-members=QApplication,QWidget,QLabel,QLineEdit,QPushButton,QVBoxLayout,Qt
 
 [MESSAGES CONTROL]
 disable=
-    C0114,
-    C0115,
-    C0116
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0116,  # missing-function-docstring
+    E0611   # no-name-in-module (disable globally for PyQt false alarms)
 
 [FORMAT]
 max-line-length=100
